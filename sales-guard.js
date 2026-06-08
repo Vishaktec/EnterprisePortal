@@ -32,7 +32,10 @@ onAuthStateChanged(auth, async (user) => {
 
     window.location.replace("/EnterprisePortal/");
     return;
-}
+  }
+
+  document.documentElement.style.visibility = "visible";
+});
 
 window.vishakSignOut = async function () {
   await signOut(auth);
