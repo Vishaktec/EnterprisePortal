@@ -22,19 +22,15 @@ const auth = getAuth(app);
 document.documentElement.style.visibility = "hidden";
 
 onAuthStateChanged(auth, async (user) => {
-
-  if (!user || user.email !== ALLOWED_EMAIL) {
+if (!user || user.email !== ALLOWED_EMAIL) {
 
     if (user) await signOut(auth);
 
-    window.location.replace("/Testing/");
+    window.location.replace("/EnterprisePortal/");
     return;
-  }
-
-  document.documentElement.style.visibility = "visible";
-});
+}
 
 window.vishakSignOut = async function () {
   await signOut(auth);
-  window.location.replace("/Testing/");
+  window.location.replace("/EnterprisePortal/");
 };
