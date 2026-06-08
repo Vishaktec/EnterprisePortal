@@ -30,14 +30,11 @@ onAuthStateChanged(auth, async (user) => {
 
     if (user) await signOut(auth);
 
-    window.location.replace("/Testing/");
+    window.location.replace("/EnterprisePortal/");
     return;
-  }
-
-  document.documentElement.style.visibility = "visible";
-});
+}
 
 window.vishakSignOut = async function () {
   await signOut(auth);
-  window.location.replace("/Testing/");
+  window.location.replace("/EnterprisePortal/");
 };
